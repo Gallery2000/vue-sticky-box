@@ -1,10 +1,10 @@
-# vue-sticky组件
-- 组件将检测浏览器是否支持sticky属性，不支持则通过JS方法实现sticky功能
+# vue-sticky-box组件
+- 组件将检测浏览器是否支持sticky属性，如不支持则通过JS方法实现sticky功能
 
 # 示例运行步骤
 - 【下载依赖】npm install
 - 【运行项目】npm run dev
-- 【打开对应链接】浏览器打开对应链接，
+- 【打开对应链接】浏览器打开对应链接
 - 【设置top值示例】http://127.0.0.1:8080/#/testY
 - 【设置left值示例】http://127.0.0.1:8080/#/testX
 
@@ -19,11 +19,11 @@
 # 使用方法如下
 - 引入sticky组件
 - 在通过top或left值设置sticky的left或top值
-```
-<sticky-box top="0px" left="0px" class="box">
-  <div class="slot">内容</div>
-</sticky>
-```
+  ```
+  <sticky-box top="0px" left="0px" class="box">
+    <div class="slot">内容</div>
+  </sticky>
+  ```
 
 
 # 注意事项
@@ -36,4 +36,4 @@
 - 同样的，在样式中设置盒子容器的left和top值也是无效的，会被程序内部重新设置。只能通过dom属性值传递到组件中进行设置
 
 
-# 组件原理及详细介绍，请移步这个文章
+# 组件原理及详细介绍，请移步[这个文章](https://segmentfault.com/a/1190000016587224#articleHeader10)
