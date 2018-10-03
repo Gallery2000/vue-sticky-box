@@ -1,6 +1,6 @@
 # vue-sticky-box组件
 组件将检测浏览器是否支持sticky属性，如不支持则通过JS方法实现sticky功能
-![sticky效果图](http://momo-project.b0.upaiyun.com/Assets/vue-stickey-box/imgs/001.gif)
+![sticky效果图](./sticky.gif)
 
 # 示例运行步骤
 - 【下载依赖】npm install
