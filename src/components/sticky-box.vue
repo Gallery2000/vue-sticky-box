@@ -41,8 +41,8 @@ export default {
       },
       isFixedX: false, // 是否已经设置为fixed布局，用于优化性能，防止多次设置
       isFixedY: false, // 是否已经设置为fixed布局，用于优化性能，防止多次设置
-      isSupport: this.cssSupport('position', 'sticky'),
-      // isSupport: false,
+      // isSupport: this.cssSupport('position', 'sticky'),
+      isSupport: false,
     }
   },
 
@@ -112,10 +112,10 @@ export default {
       const contentLeft = $content.getBoundingClientRect().left
 
       if (this.top !== 'unset') {
-        if (boxTop > this.top && this.isFixedY) {
+        if (boxTop > parseInt(this.top) && this.isFixedY) {
           this.isFixedY = false
           contentStyle.position = 'static'
-        } else if (boxTop < this.top && !this.isFixedY) {
+        } else if (boxTop < parseInt(this.top) && !this.isFixedY) {
           this.isFixedY = true
           contentStyle.position = 'fixed'
           this.onResize()
@@ -128,12 +128,12 @@ export default {
       }
 
       if (this.left !== 'unset') {
-        if (boxLeft > this.left && this.isFixedX) {
+        if (boxLeft > parseInt(this.left) && this.isFixedX) {
           this.isFixedX = false
-          $content.style.position = 'static'
-        } else if (boxLeft < this.left && !this.isFixedX) {
+          contentStyle.position = 'static'
+        } else if (boxLeft < parseInt(this.left) && !this.isFixedX) {
           this.isFixedX = true
-          $content.style.position = 'fixed'
+          contentStyle.position = 'fixed'
           this.onResize()
         }
 
