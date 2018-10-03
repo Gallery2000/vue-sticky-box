@@ -8,6 +8,11 @@ html, body {
   width: 3000px;
   height: 100%;
   font-size: 0;
+  background-color: #54C0DC;
+}
+.left, .right, .other {
+  font-size: 30px;
+  line-height: 50px;
 }
 .left {
   display: inline-block;
@@ -19,30 +24,25 @@ html, body {
   vertical-align: top;
   position: relative;
   display: inline-block;
-  height: 100%;
-  width: 2000px;
 }
 .sticky-content {
   height: 50px;
   width: 300px;
-  background-color: red;
+  background-color: #F66F2C;
 }
-.content {
-  width: 100%;
-  height: calc(100% - 50px);
-  background-color: yellow;
+.other {
+  vertical-align: top;
+  padding-top: 50px;
+  display: inline-block;
 }
-
 </style>
 <template>
   <div class="p-test">
-    <div class="left">主页简介</div>
-    <sticky-box left="-10px" class="top">
-      <div class="sticky-content">目录</div>
+    <div class="left">侧边栏</div>
+    <sticky-box left="0" class="right">
+      <div class="sticky-content">顶部栏</div>
     </sticky-box>
-    <div class="right">
-      <div class="content">主体内容</div>
-    </div>
+    <div class="other">主体内容</div>
   </div>
 </template>
 <script>

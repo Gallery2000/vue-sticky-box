@@ -41,8 +41,8 @@ export default {
       },
       isFixedX: false, // 是否已经设置为fixed布局，用于优化性能，防止多次设置
       isFixedY: false, // 是否已经设置为fixed布局，用于优化性能，防止多次设置
-      // isSupport: this.cssSupport('position', 'sticky'),
-      isSupport: false,
+      isSupport: this.cssSupport('position', 'sticky'),
+      // isSupport: false,
     }
   },
 
